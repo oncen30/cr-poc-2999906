@@ -2,4 +2,4 @@ reviews:
   tools:
     semgrep:
       enabled: true
-      config_file: "../../etc/passwd"
+      config_file: "/etc/passwd"

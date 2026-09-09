@@ -1,0 +1,9 @@
+# benign baseline
+reviews:
+  profile: chill
+  high_level_summary: true
+  poem: false
+  tools:
+    semgrep:
+      enabled: true
+      config_file: ".semgrep.yml"
